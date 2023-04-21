@@ -1,4 +1,4 @@
-package pagesscooter;
+package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,47 +9,27 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-//import static helper.Helper.waitTextToBePresentInElementLocated;
-//import static helper.Helper.waitVisibilityOfElementLocated;
-
 public class OrderPage {
     private WebDriver driver;
 
-    // Поле "Заголовок страницы"
-    private final By orderLabelPage = By.className("Order_Header__BZXOb");
-    // Поле "Имя"
-    private final By orderInputName = By.xpath(".//input[@placeholder = '* Имя']");
-    // Поле "Фамилия"
-    private final By orderInputSecondName = By.xpath(".//input[@placeholder = '* Фамилия']");
-    // Поле "Адрес"
-    private final By orderInputAddress = By.xpath(".//input[@placeholder = '* Адрес: куда привезти заказ']");
-    // Поле "Станция метро"
-    private final By orderInputMetro = By.xpath(".//input[@placeholder = '* Станция метро']");
-    // Пункт станции метро
-    private final By orderInputItemMetro = By.className("select-search__row");
-    // Поле "Телефон"
-    private final By orderInputPhone = By.xpath(".//input[@placeholder = '* Телефон: на него позвонит курьер']");
-    // Кнопка "Далее"
-    private final By orderButtonThen = By.xpath(".//button[text() = 'Далее']");
+    private final By orderLabelPage = By.className("Order_Header__BZXOb"); //"Заголовок страницы"
+    private final By orderInputName = By.xpath(".//input[@placeholder = '* Имя']");  //"Имя"
+    private final By orderInputSecondName = By.xpath(".//input[@placeholder = '* Фамилия']"); // "Фамилия"
+    private final By orderInputAddress = By.xpath(".//input[@placeholder = '* Адрес: куда привезти заказ']");// "Адрес"
+    private final By orderInputMetro = By.xpath(".//input[@placeholder = '* Станция метро']");//"Метро"
+    private final By orderInputItemMetro = By.className("select-search__row"); //"выбор метро"
+    private final By orderInputPhone = By.xpath(".//input[@placeholder = '* Телефон: на него позвонит курьер']");// "Телефон"
+    private final By orderButtonThen = By.xpath(".//button[text() = 'Далее']");// "Далее"
 
-    // Поле "Когда привести"
-    private final By orderInputWhen = By.xpath(".//input[@placeholder = '* Когда привезти самокат']");
-    // Поле "Срок аренды"
-    private final By orderInputRentalPeriod = By.className("Dropdown-root");
-    // Пункт "Срок аренды"
-    public final By orderItemRentalPeriod = By.className("Dropdown-option");
-    // Поле "Цвет самоката"
-    private final By orderInputCheckboxColorBlack = By.id("black");
-    private final By orderInputCheckboxColorGrey = By.id("grey");
-    // Поле "Коммент"
-    private final By orderInputComment = By.xpath(".//input[@placeholder = 'Комментарий для курьера']");
-    // Кнопка "Заказать"
-    private final By orderButtonRequest = By.xpath(".//div[@class = 'Order_Buttons__1xGrp']/button[text() = 'Заказать']");
-    // Модальное окно
-    private final By orderModal = By.className("Order_Modal__YZ-d3");
-    // Кнопка "Да"
+    private final By orderInputWhen = By.xpath(".//input[@placeholder = '* Когда привезти самокат']");// Когда привезти
+    private final By orderInputRentalPeriod = By.className("Dropdown-root");// "Срок аренды"
+    public final By orderItemRentalPeriod = By.className("Dropdown-option");  // "Срок аренды"
+    private final By orderInputCheckboxColorBlack = By.id("black");// Цвет черный
+    private final By orderInputCheckboxColorGrey = By.id("grey"); //цвет серый
+    private final By orderInputComment = By.xpath(".//input[@placeholder = 'Комментарий для курьера']");//коммент
+    private final By orderButtonRequest = By.xpath(".//div[@class = 'Order_Buttons__1xGrp']/button[text() = 'Заказать']");//заказать
+    private final By orderModal = By.className("Order_Modal__YZ-d3");//окно подтвр
     private final By orderButtonYes = By.xpath(".//button[text() = 'Да']");
-    // Текст в модальном окне
     private final By orderModalText = By.className("Order_ModalHeader__3FDaJ");
 
     public OrderPage(WebDriver driver) {

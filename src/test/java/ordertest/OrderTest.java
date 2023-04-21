@@ -1,11 +1,8 @@
 package ordertest;
 import chromedriver.WebDriver;
-//import driver.UseWebDriver;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-//import pages.HomePage;
-//import pages.OrderPage;
 import pagesscooter.HomePage;
 import pagesscooter.OrderPage;
 
