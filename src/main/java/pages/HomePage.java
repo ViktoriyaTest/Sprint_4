@@ -13,7 +13,7 @@ import java.time.Duration;
 public class HomePage {
     private WebDriver driver;
 
-    //кнопка "Заказать" в шапке
+    //кнопка "Заказать" в шапке.
     private final By orderButtonUp = By.xpath(".//div[@class = 'Header_Nav__AGCXC']/button[text() = 'Заказать']");
     // Кнопка "Заказать" в середине
     private final By orderButtonDown = By.xpath(".//div[@class = 'Home_RoadMap__2tal_']//button[text() = 'Заказать']");
